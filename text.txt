@@ -1,0 +1,44 @@
+import org.junit.Test;
+import static org.junit.Assert.*;
+
+public class CalculatorTest {
+
+    @Test
+    public void testAdd() {
+        assertEquals(3.0, Calculator.add(1, 2), 0.001);
+        assertEquals(3.4, Calculator.add(1.0, 2.4), 0.001);
+        assertEquals(3.0, Calculator.add("1", "2"), 0.001);
+        assertEquals(6.0, Calculator.add(new int[]{1, 2, 3}), 0.001);
+        assertEquals(6.0, Calculator.add(new String[]{"1", "2", "3"}), 0.001);
+    }
+
+    @Test
+    public void testSubtract() {
+        assertEquals(3.0, Calculator.subtract(5, 2), 0.001);
+        assertEquals(2.6, Calculator.subtract(5.0, 2.4), 0.001);
+        assertEquals(3.0, Calculator.subtract("5", "2"), 0.001);
+        assertEquals(3.0, Calculator.subtract(new int[]{5, 2}), 0.001);
+        assertEquals(3.0, Calculator.subtract(new String[]{"5", "2"}), 0.001);
+    }
+
+    @Test
+    public void testMultiply() {
+        assertEquals(10.0, Calculator.multiply(5, 2), 0.001);
+        assertEquals(12.0, Calculator.multiply(5.0, 2.4), 0.001);
+        assertEquals(10.0, Calculator.multiply("5", "2"), 0.001);
+        assertEquals(10.0, Calculator.multiply(new int[]{5, 2}), 0.001);
+        assertEquals(10.0, Calculator.multiply(new String[]{"5", "2"}), 0.001);
+    }
+
+    @Test
+    public void testDivide() {
+        assertEquals(5.0, Calculator.divide(10, 2), 0.001);
+        assertEquals(4.166666666666667, Calculator.divide(10.0, 2.4), 0.001);
+        assertEquals(5.0, Calculator.divide("10", "2"), 0.001);
+        assertEquals(5.0, Calculator.divide(new int[]{10, 2}), 0.001);
+        assertEquals(5.0, Calculator.divide(new String[]{"10", "2"}), 0.001);
+    }
+
+    // Add more test cases as needed
+
+}
